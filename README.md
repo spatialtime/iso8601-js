@@ -30,11 +30,19 @@ You can install **iso8601-js** as an NPM package:
 ```shell
 npm install @spatialtime/iso8601
 ```
+```html
+<script type="module">
+import {dateFromISOOrdinalDate} from './node_modules/@spatialtime/iso8601/iso8601.mjs';
+</script>
+```
 
 Or link directly to the CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@spatialtime/iso8601@latest/iso8601.mjs" type="module"></script>
+<script type="module">
+    import {dateFromISOOrdinalDate} from './node_modules/@spatialtime/iso8601/iso8601.mjs';
+    ...
+</script>
 ```
 
 ## Datetimes
