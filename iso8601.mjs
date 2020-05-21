@@ -13,7 +13,7 @@ const MAX_MINUTE = 59;
 const MIN_SECOND = 0;
 const MAX_SECOND = 60;
 
-const MILLISECONDS_PER_DAY = 86400000
+const MILLISECONDS_PER_DAY = 86400000;
 
 /*
  * dateFromISODatetime creates a JavaScript date from a string that adheres to 
@@ -95,12 +95,12 @@ let dateFromISOWeek = function (isoWeek) {
     if (matches[3]) {
         day = parseInt(matches[3]);
     } else {
-        day = 1
+        day = 1;
     }
 
     let ordinalDate = ordinalDateFromWeekDate(year, week, day);
     let time = timeFromYear(year) + (ordinalDate -1)*MILLISECONDS_PER_DAY;
-    return new Date(time)    
+    return new Date(time);
 }
 
 
@@ -125,8 +125,8 @@ let formatDateAsISOWeek = function (year, month, day, wantShortForm) {
     }
 
     const doy = monthStartDay(month, isLeapYear(year)) + day - 1;
-    const dow = weekday(year, month,day)+1
-    let woy = Math.floor((doy-dow+10)/7)
+    const dow = weekday(year, month,day)+1;
+    let woy = Math.floor((doy-dow+10)/7);
     if(woy ===0){
         --year;
         woy = weeksInISOYear(year);
@@ -179,7 +179,7 @@ let dateFromISOOrdinalDate = function (isoOrdinalDate) {
         throw new RangeError(`Day must be >= 1 and <= ${maxDay}.`);
     }
 
-    return new Date(timeFromYear(year) + (doy-1)*MILLISECONDS_PER_DAY)
+    return new Date(timeFromYear(year) + (doy-1)*MILLISECONDS_PER_DAY);
 }
 
 
@@ -354,14 +354,14 @@ function daysInYear(y){
  */
 function dayFromYear(y){
     return (365 * (y - 1970) + Math.floor((y - 1969) / 4) - 
-    Math.floor((y - 1901) / 100) + Math.floor((y - 1601) / 400))
+    Math.floor((y - 1901) / 100) + Math.floor((y - 1601) / 400));
 }
 
 /*
  * Convert daysFromYear into milleseconds...can feed into new Date()
  */
 function timeFromYear(y){
-    return dayFromYear(y)*MILLISECONDS_PER_DAY
+    return dayFromYear(y)*MILLISECONDS_PER_DAY;
 }
 
 /*
