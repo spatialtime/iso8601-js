@@ -40,7 +40,7 @@ Or link directly to the CDN:
 
 ```html
 <script type="module">
-    import {dateFromISOOrdinalDate} from './node_modules/@spatialtime/iso8601/iso8601.mjs';
+    import {dateFromISOOrdinalDate}  from 'https://cdn.jsdelivr.net/npm/@spatialtime/iso8601@latest/iso8601.mjs';
     ...
 </script>
 ```
