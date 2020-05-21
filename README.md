@@ -32,7 +32,8 @@ npm install @spatialtime/iso8601
 ```
 ```html
 <script type="module">
-import {dateFromISOOrdinalDate} from './node_modules/@spatialtime/iso8601/iso8601.mjs';
+    import {dateFromISOOrdinalDate} from './node_modules/@spatialtime/iso8601/iso8601.mjs';
+    ...
 </script>
 ```
 
